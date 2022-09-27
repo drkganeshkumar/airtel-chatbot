@@ -1,0 +1,104 @@
+{
+    "0": {
+        "block_uuid": "398b6ac4-097f-4a54-aa79-82f89a0ead3d",
+        "question": [
+            {
+                "handler": "send_message",
+                "params": {
+                    "tag": "",
+                    "text": "*Welcome to C-racker Alpha Testing!*\n\nC-racker is rule based chatbot that is being created specifically for WhatsApp Business Platform to enhance online shopping and payment experiences. We focus on customizablity, reliablity, scalablity, minimal code development and ease of integration. We are still in alpha stage and we invite you to part take in our development journey.\n\nFrom Team Infotechies",
+                    "type": "external",
+                    "buttons": [
+                        {
+                            "type": "inline",
+                            "text": "Accept"
+                        },
+                        {
+                            "type": "inline",
+                            "text": "Decline"
+                        }
+                    ],
+                    "recipient": {
+                        "type": "main_contact",
+                        "way_of_communication": "over_all"
+                    },
+                    "attachments": [
+                        {
+                            "type": "picture",
+                            "value": "1c829e4d-9456-4762-b89d-539d271714c0"
+                        }
+                    ],
+                    "send_to_all_chat_sources": true,
+                    "create_chat_if_not_exists": true
+                }
+            }
+        ],
+        "answer": [
+            {
+                "handler": "buttons",
+                "params": [
+                    {
+                        "value": "Accept",
+                        "params": [
+                            {
+                                "handler": "goto",
+                                "params": {
+                                    "type": "question",
+                                    "step": 1
+                                }
+                            }
+                        ],
+                        "synonyms": [
+                            "yes",
+                            "okay"
+                        ]
+                    },
+                    {
+                        "value": "Decline",
+                        "params": [
+                            {
+                                "handler": "goto",
+                                "params": {
+                                    "type": "question",
+                                    "step": 2
+                                }
+                            }
+                        ],
+                        "synonyms": [
+                            "no"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "1": {
+        "block_uuid": "81d11bd8-aec9-4303-a711-66a984a8229c",
+        "question": [
+            {
+                "handler": "send_message",
+                "params": {
+                    "tag": "",
+                    "text": "Thank you for enrolling in our Alpha Testing Program! We will contact you soon with further steps soon.",
+                    "type": "external",
+                    "send_to_all_chat_sources": true
+                }
+            }
+        ]
+    },
+    "2": {
+        "block_uuid": "8b9beb1f-2add-41c3-8e3b-a02d0b76e59b",
+        "question": [
+            {
+                "handler": "send_message",
+                "params": {
+                    "tag": "",
+                    "text": "Thanks for registering your response!",
+                    "type": "external",
+                    "send_to_all_chat_sources": true
+                }
+            }
+        ]
+    },
+    "conversation": false
+}
